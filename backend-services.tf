@@ -44,7 +44,7 @@ resource "aws_mq_broker" "anksagar-rmq" {
   engine_type        = "ActiveMQ"
   engine_version     = "5.15.0"
   host_instance_type = "mq.t2.micro"
-  security_group = [aws_security_group.anksagar-backend-sg.id]
+  security_groups = [aws_security_group.anksagar-backend-sg.id]
   user {
     password = var.rmqpass
     username = var.rmquser
