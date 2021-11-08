@@ -1,6 +1,6 @@
 resource "aws_elastic_beanstalk_environment" "anksagar-bean-prod" {
   name                = "anksagar-bean-prod"
-  application         = aws_elastic_beanstalk_application.anksagar-prod
+  application         = aws_elastic_beanstalk_application.anksagar-prod.name
   solution_stack_name = "64bit Amazon Linux 2 v4.2.7 running Tomcat 8.5 Corretto 11"
   cname_prefix        = "anksagar-bean-prod-domain"
   setting {
