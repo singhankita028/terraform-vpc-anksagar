@@ -118,6 +118,6 @@ resource "aws_elastic_beanstalk_environment" "anksagar-bean-prod" {
     namespace = "aws:autoscaling:launchconfiguration"
     value     = aws_security_group.anksagar-bean-elb-sg.id
   }
-  depends_on = [aws_security_group.anksagar-bean-elb-sg,aws_security_group.anksagar-prod-sg]
+  depends_on = [aws_security_group.anksagar-bean-elb-sg, aws_security_group.anksagar-prod-sg]
 
 }
