@@ -13,7 +13,7 @@ resource "aws_security_group" "anksagar-bean-elb-sg" {
     from_port = 80
     protocol  = "tcp"
     to_port   = 80
-    ipv6_cidr_blocks = [0.0.0.0/0]
+    cidr_blocks = [0.0.0.0/0]
   }
 }
 resource "aws_security_group" "anksagar-bastion-sg" {
