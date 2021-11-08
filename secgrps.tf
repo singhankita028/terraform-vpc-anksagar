@@ -6,14 +6,14 @@ resource "aws_security_group" "anksagar-bean-elb-sg" {
     from_port = 0
     protocol  = "-1"
     to_port   = 0
-    cidr_blocks = [0.0.0.0/0]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
     from_port = 80
     protocol  = "tcp"
     to_port   = 80
-    cidr_blocks = [0.0.0.0/0]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 resource "aws_security_group" "anksagar-bastion-sg" {
@@ -24,7 +24,7 @@ resource "aws_security_group" "anksagar-bastion-sg" {
     from_port = 0
     protocol  = "-1"
     to_port   = 0
-    cidr_blocks = [0.0.0.0/0]
+    cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     from_port = 22
@@ -41,7 +41,7 @@ resource "aws_security_group" "anksagar-prod-sg" {
     from_port = 0
     protocol  = "-1"
     to_port   = 0
-    cidr_blocks = [0.0.0.0/0]
+    cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     from_port = 22
@@ -59,7 +59,7 @@ resource "aws_security_group" "anksagar-backend-sg" {
     from_port = 0
     protocol  = "-1"
     to_port   = 0
-    cidr_blocks = [0.0.0.0/0]
+    cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     from_port = 0
