@@ -17,6 +17,7 @@ resource "aws_db_instance" "anksagar-rds" {
   instance_class         = "db.t2.micro"
   allocated_storage      = 20
   storage_type           = "gp2"
+  engine                 = "mysql"
   engine_version         = "5.6.34"
   name                   = var.dbname
   username               = var.dbuser
@@ -45,6 +46,7 @@ resource "aws_mq_broker" "anksagar-rmq" {
   engine_version     = "5.15.0"
   host_instance_type = "mq.t2.micro"
   security_groups    = [aws_security_group.anksagar-backend-sg.id]
+  subnet_ids = [module.vpc.private_subnets[0]]
   user {
     password = var.rmqpass
     username = var.rmquser
