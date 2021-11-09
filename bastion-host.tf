@@ -28,4 +28,5 @@ resource "aws_instance" "anksagar-bastion-host" {
     private_key = file(var.PRIV_KEY_PATH)
     host        = self.public_ip
   }
+  depends_on = [aws_db_instance.anksagar-rds]
 }
