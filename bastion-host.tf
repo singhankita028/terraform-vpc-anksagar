@@ -19,7 +19,7 @@ resource "aws_instance" "anksagar-bastion-host" {
   provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/anksagar-dbdeploy.sh",
-      "sudo /tmp/anksagar-dbdeploy.sh"
+      "sudo /tmp/anksagar-dbdeploy.sh -y"
     ]
   }
 
